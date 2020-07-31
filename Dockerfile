@@ -21,6 +21,6 @@
 ## sudo docker run -p 8080:8080 -t docker-spring-boot:1.0
 ## sudo docker run -p 80:8080 -t docker-spring-boot:1.0
 ## sudo docker run -p 443:8443 -t docker-spring-boot:1.0
-FROM docker-release-candidate-local.artifactory-lvn.broadcom.net/broadcom-images/redhat/openjdk:latest 
+FROM openjdk:latest 
 COPY target/SpringBootHelloWorld-0.0.1-SNAPSHOT.jar SpringBootHelloWorld-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["sh", "-c", "java -jar /SpringBootHelloWorld-0.0.1-SNAPSHOT.jar"]
