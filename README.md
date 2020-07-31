@@ -1,1 +1,1 @@
-# sample-helm-helloworld
+# sample-helloworld

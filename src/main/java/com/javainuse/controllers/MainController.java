@@ -10,7 +10,7 @@ public class MainController {
     @ResponseBody
     @GetMapping("/")
     public String hello() {
-        return "Hello, This is example for app deploymnet using HELM3";
+        return "Hello Controller";
     }
 
 }

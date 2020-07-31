@@ -1,3 +1,0 @@
-@Library('GTSO-CI-Jenkins-Library@dev') _
-scanPipeline build_config: "resources/build-info.yaml",
-   jenkins_node_label: "jenkins_slave"
