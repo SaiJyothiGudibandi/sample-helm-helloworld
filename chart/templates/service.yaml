@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Service
 metadata:
-  name: sg-hello-server
+  name: sg-helm-hello-server
   labels:
-    app: sg-hello
+    app: sg-helm-hello
 spec:
   type: LoadBalancer
   ports:
