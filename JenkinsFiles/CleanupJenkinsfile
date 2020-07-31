@@ -1,0 +1,3 @@
+@Library('GTSO-CI-Jenkins-Library@dev-v1.0.1') _
+cleanupPipeline build_config: "resources/build-info.yaml",
+jenkins_node_label: "jenkins_slave"

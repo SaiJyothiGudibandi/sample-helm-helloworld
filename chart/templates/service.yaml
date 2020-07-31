@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: sg-hello-server
+  labels:
+    app: sg-hello
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: http
+      protocol: TCP
+      name: http

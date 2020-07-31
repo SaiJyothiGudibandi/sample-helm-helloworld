@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sg-hello-server
+  labels:
+    app: sg-hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sg-hello
+  template:
+    metadata:
+      labels:
+        app: sg-hello
+    spec:
+      containers:
+      - name: sg-hello
+        image: gcr.io/shaped-kite-284918/sample-helloworld:v1
+        ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP

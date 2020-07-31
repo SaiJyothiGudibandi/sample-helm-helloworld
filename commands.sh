@@ -1,0 +1,4 @@
+#!/bin/bash"
+
+sh "/opt/cov-analysis-linux64-2019.06/bin/cov-configure --java [--no-capture-config-files] [--no-android] [--no-jsp] && /opt/cov-analysis-linux64-2019.06/bin/cov-build --dir /opt/coverity-temp2/intermediate/ /usr/share/maven/bin/mvn compile 
+&& /opt/cov-analysis-linux64-2019.06/bin/cov-analyze --dir /opt/coverity-temp2/intermediate/ -sf /opt/cov-analysis-linux64-2019.06/bin/license.dat --all && /opt/cov-analysis-linux64-2019.06/bin/cov-commit-defects --dir /opt/coverity-temp2/intermediate/ -sf /opt/cov-analysis-linux64-2019.06/bin/license.dat --url ${COV_URL} --auth-key-file /cov-secret/ak-cov-ren-01.ren.broadcom.net-8080 --stream ${COV_STREAM}"
