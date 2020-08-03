@@ -8,14 +8,3 @@ image:
 service:
   type: LoadBalancer
   port: 8080
-  annotations:
-    cloud.google.com/neg: '{"ingress": true}'
-
-
-resources: {}
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
