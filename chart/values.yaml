@@ -3,7 +3,7 @@ name : sg-hello-helm
 replicaCount: 1
 
 image:
-  gcrImageLoc: gcr.io/shaped-kite-284918/sg-hello-helm-server:v1
+  gcrImageLoc: gcr.io/shaped-kite-284918/sg-hello-helm:v1.0
 
 service:
   type: LoadBalancer
