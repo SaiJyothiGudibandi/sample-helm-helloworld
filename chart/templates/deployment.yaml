@@ -1,23 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
+{{- with .Values }}
 metadata:
-  name: "{{ .Values.name}}-server"
+  name: "{{ .name}}-server"
   labels:
-    app: {{ .Values.name}}
+    app: {{ .name}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Values.name}}
+      app: {{ .name}}
   template:
     metadata:
       labels:
-        app: {{ .Values.name}}
+        app: {{ .name}}
     spec:
       containers:
-      - name: {{ .Values.name}}
-        image: "{{ .Values.image.gcrImageLoc }}"
+      - name: {{ .name}}
+        image: "{{ .image.gcrImageLoc }}"
         ports:
-            - name: http
+            - name: {{ .service.port }}
               containerPort: 8080
               protocol: TCP
