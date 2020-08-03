@@ -22,3 +22,4 @@ spec:
             - name: {{ .service.port }}
               containerPort: 8080
               protocol: TCP
+{{- end }}
