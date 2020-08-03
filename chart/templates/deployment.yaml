@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sg-hello-helm-server
+  name: "{{ .Values.name}}-server"
   labels:
-    app: sg-hello-helm
+    app: {{ .Values.name}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sg-hello-helm
+      app: {{ .Values.name}}
   template:
     metadata:
       labels:
-        app: sg-hello-helm
+        app: {{ .Values.name}}
     spec:
       containers:
-      - name: sg-hello-helm
-        image: gcr.io/shaped-kite-284918/sg-hello-helm-server:v1
+      - name: {{ .Values.name}}
+        image: "{{ .Values.image.gcrImageLoc }}"
         ports:
             - name: http
               containerPort: 8080
