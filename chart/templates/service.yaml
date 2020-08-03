@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: Service
+{{- with .Values }}
 metadata:
-  name: "{{ .Values.name}}-service"
+  name: "{{ .name}}-service"
   labels:
-    app: {{ .Values.name}}
+    app: {{ .name}}
 spec:
-  type: {{ .Values.service.type}}
+  type: {{ .service.type}}
   ports:
-    - port: 8080
+    - port: {{ .service.port }}
       targetPort: http
       protocol: TCP
       name: http
   selector:
-    app: {{ .Values.name}}
+    app: {{ .name}}
