@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 {{- with .Values }}
 metadata:
-  name: "{{ .name}}-server"
+  name: "{{ .name }}-server"
   labels:
-    app: {{ .name}}
+    app: {{ .name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .name}}
+      app: {{ .name }}
   template:
     metadata:
       labels:
-        app: {{ .name}}
+        app: {{ .name }}
     spec:
       containers:
-      - name: {{ .name}}
+      - name: {{ .name }}
         image: "{{ .image.gcrImageLoc }}"
         ports:
             - name: {{ .service.port }}

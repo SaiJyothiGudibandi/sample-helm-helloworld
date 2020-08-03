@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 {{- with .Values }}
 metadata:
-  name: "{{ .name}}-service"
+  name: "{{ .name }}-service"
   labels:
     app: {{ .name}}
 spec:
@@ -13,5 +13,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ .name}}
+    app: {{ .name }}
 {{- end }}
