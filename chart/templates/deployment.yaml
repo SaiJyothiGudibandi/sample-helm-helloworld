@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 {{- with .Values }}
 metadata:
-  name: "{{ .name }}-server"
+  name: "{{ include "app.name" . }}-server"
   labels:
     app: {{ .name }}
 spec:
@@ -19,7 +19,7 @@ spec:
       - name: {{ .name }}
         image: "{{ .image.gcrImageLoc }}"
         ports:
-            - name: TCP
+            - name: {{ .service.name }}
               containerPort: {{ .service.port }}
               protocol: TCP
 {{- end }}

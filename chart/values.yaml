@@ -7,4 +7,8 @@ image:
 
 service:
   type: LoadBalancer
+  name: http
   port: 8080
+
+config:
+  config_name: "My Helm 3.0"
