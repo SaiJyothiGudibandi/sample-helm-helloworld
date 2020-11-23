@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sg-hello-helm
-        image: gcr.io/shaped-kite-284918/sg-hello-helm-server:v1
+        image: gcr.io/nga-gcp-demo/gke-hello-helm-server:v1
         ports:
             - name: http
               containerPort: 8080
