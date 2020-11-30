@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 {{- with .Values }}
 metadata:
-  name: "{{ include "app.name" . }}-server"
+  name: "{{ include "app.name" . }}-deployment"
   labels:
     app: {{ .name }}
 spec:
