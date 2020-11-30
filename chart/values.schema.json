@@ -14,7 +14,7 @@
         "properties": {
           "gcrImageLoc": {
             "type": "string",
-            "pattern": "^[a-z0-9-_]+$"
+            "pattern": "^[ a-z0-9-_]+$"
           },
           "pullPolicy": {
             "type": "string",
