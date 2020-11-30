@@ -1,9 +1,9 @@
-name : sg-hello-helm
+name : nga-gcp-demo-app
 
 replicaCount: 1
 
 image:
-  gcrImageLoc: gcr.io/shaped-kite-284918/sg-hello-helm:v1.0
+  gcrImageLoc: gcr.io/nga-gcp-demo/nga-gcp-demo:v1.0
 
 service:
   type: LoadBalancer
