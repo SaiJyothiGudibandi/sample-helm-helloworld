@@ -10,7 +10,7 @@ public class MainController {
     @ResponseBody
     @GetMapping("/")
     public String hello() {
-        return "Hello Helm";
+        return "Welcome to NGA GCP Demo";
     }
 
 }
