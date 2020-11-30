@@ -27,7 +27,7 @@ public class MainControllerTest {
     public void getHello() throws MalformedURLException {
 
         ResponseEntity<String> response = restTemplate.getForEntity(new URL("http://localhost:" + port + "/").toString(), String.class);
-        assertEquals("Hello Helm", response.getBody());
+        assertEquals("Welcome to NGA GCP Demo", response.getBody());
 
     }
 
