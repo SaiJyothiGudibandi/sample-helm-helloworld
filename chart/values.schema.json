@@ -8,14 +8,14 @@
       "image": {
         "type": "object",
         "required": [
-          "gcrImageLoc",
+          # "gcrImageLoc",
           "pullPolicy"
         ],
         "properties": {
-          "gcrImageLoc": {
-            "type": "string",
-            "pattern": "^[a-z0-9-_]+$"
-          },
+          # "gcrImageLoc": {
+          #   "type": "string",
+          #   "pattern": "^[a-z0-9-_]+$"
+          # },
           "pullPolicy": {
             "type": "string",
             "pattern": "^(Always|Never|IfNotPresent)$"
