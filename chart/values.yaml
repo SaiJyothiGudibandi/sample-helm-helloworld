@@ -3,7 +3,7 @@ name : nga-gcp-demo-app
 replicaCount: 1
 
 image:
-  gcrImageLoc: gcr.io/nga-gcp-demo/nga-gcp-demo:v1.0
+  gcrImageLoc: "gcr.io/nga-gcp-demo/nga-gcp-demo:v1.0"
   pullPolicy: IfNotPresent
 
 service:
